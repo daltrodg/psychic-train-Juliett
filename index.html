@@ -42,7 +42,7 @@
         <p class="info">Sometimes web devs create user interfaces(UI) that are poorly designed and can make it difficult navigating or understanding a webpage. A lot of poorly designed UI's come in the flavor of forms. These forms can be used to create an account or enter a payment method. Some UI designs are just inefficient in the space they use or the way they capture the information you have entered. In this case of UI's that could use some improvment I wanted to look at Amazons payment method form.</p>
       </div>
 
-      <img class="amazonForm1" src="imgs/amazonUXExample.png">
+      <img class="amazonForm1" src="imgs/amazonUXExample.png" alt="Amazon Payment Method Form">
 
       <!-- Explaining the bad UI -->
 
@@ -50,7 +50,7 @@
         <p class="info">Pictured above is what a user sees when they choose to enter a payment method onto Amazon's website. For the most part the UI is not bad and is more on the simplistic approach to UI. The problem is the unnecessary dropdown menus. In the payment method form, the expiration date input field includes two dropdown menus for a month and a year. There is one more dropdown menu that is used to link your card through your bank, if your bank is supported by this system. As of making this the system only supports five different banks. Why would they use a dropdown here? This is unnecessary clicking.</p>
       </div>
 
-      <img class="amazonBankSelection" src="imgs/bankSelection1.png">
+      <img class="amazonBankSelection" src="imgs/bankSelection1.png" alt="Amazon Card Linking UI">
 
       <!-- Explaining the bad UI -->
 
@@ -61,7 +61,7 @@
       <!-- Improved Bank Selection UI-->
 
       <form class="cardForm2">
-        <label for="bankSelection">Link your card from your bank</label>
+        <label>Link your card from your bank</label>
         <div id="learnMore"><a href="#">Learn More</a></div>
         <div id="bankSelection" class="mb-3">
           <div class="form-check">
@@ -110,11 +110,11 @@
       
 <!-- Improved Expiration Date From -->
       <form class="cardForm1">
-        <label  id="expirationLabel" for="expirationDate">Expiration Date</label>
+        <label  id="expirationLabel">Expiration Date</label>
         <div id="expirationDate" class="expiration-date">
-          <input type="text" id="expirationMonth" name="expirationMonth" placeholder="MM" maxlength="2" pattern="\d{2}" title="Two-digit month" required />
+          <input type="text" id="expirationMonth" name="expirationMonth" placeholder="MM" maxlength="2" pattern="\d{2}" title="Two-digit month" required >
           /
-          <input type="text" id="expirationYear" name="expirationYear" placeholder="YY" maxlength="2" pattern="\d{2}" title="Two-digit year" required />
+          <input type="text" id="expirationYear" name="expirationYear" placeholder="YY" maxlength="2" pattern="\d{2}" title="Two-digit year" required >
         </div>
       
         <button type="button" id="validateButton" class="btn btn-primary">Display</button>
