@@ -8,7 +8,7 @@ $(function() {
     },
     {
       title: "See The Code",
-      link: "", 
+      link: "https://github.com/daltrodg/psychic-train-Juliett", 
     },
     {
       title: "Page Validity",
