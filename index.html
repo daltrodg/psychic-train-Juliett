@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>Good and Bad UX Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+    >
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <!-- Nav Container -->
+    <div class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!" style="color: white">Dalton Rodgers Bad UI Improvement Project</a>
+        </div>
+        <nav>
+          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+            <li>
+              <a href="#!" style="background-color: black; color: white;">My Links</a>
+              <ul class="nav-dropdown">
+                <!-- navInfo loaded in navInfoScript.js -->
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Start Main Body Information -->
+
+    <div class="mainContent">
+      <div class="intro">
+        <p class="info">Sometimes web devs create user interfaces(UI) that are poorly designed and can make it difficult navigating or understanding a webpage. A lot of poorly designed UI's come in the flavor of forms. These forms can be used to create an account or enter a payment method. Some UI designs are just inefficient in the space they use or the way they capture the information you have entered. In this case of UI's that could use some improvment I wanted to look at Amazons payment method form.</p>
+      </div>
+
+      <img class="amazonForm1" src="imgs/amazonUXExample.png">
+
+      <!-- Explaining the bad UI -->
+
+      <div class="explanation1">
+        <p class="info">Pictured above is what a user sees when they choose to enter a payment method onto Amazon's website. For the most part the UI is not bad and is more on the simplistic approach to UI. The problem is the unnecessary dropdown menus. In the payment method form, the expiration date input field includes two dropdown menus for a month and a year. There is one more dropdown menu that is used to link your card through your bank, if your bank is supported by this system. As of making this the system only supports five different banks. Why would they use a dropdown here? This is unnecessary clicking.</p>
+      </div>
+
+      <img class="amazonBankSelection" src="imgs/bankSelection1.png">
+
+      <!-- Explaining the bad UI -->
+
+      <div class="explanation2">
+        <p class="info">Above is the bank selection for linking a card through a bank. As you can see, only five banks are supported. These could have easily been displayed with buttons or radio buttons. If the link card button is pressed and no bank is selected it should instruct the user to select a bank and try again. The banks can be displayed as radio buttons or the logos of the banks can be used as buttons, displaying the name when hovering on the button.</p>
+      </div>
+     
+      <!-- Improved Bank Selection UI-->
+
+      <form class="cardForm2">
+        <label for="bankSelection">Link your card from your bank</label>
+        <div id="learnMore"><a href="#">Learn More</a></div>
+        <div id="bankSelection" class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="bank" id="bank1" value="Amex" required>
+            <label class="form-check-label" for="bank1">
+              Amex
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="bank" id="bank2" value="Citi">
+            <label class="form-check-label" for="bank2">
+              Citi
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="bank" id="bank3" value="Discover">
+            <label class="form-check-label" for="bank3">
+              Discover
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="bank" id="bank4" value="Mercury Financial">
+            <label class="form-check-label" for="bank4">
+              Mercury Financial
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="bank" id="bank5" value="U.S. Bank">
+            <label class="form-check-label" for="bank5">
+              U.S. Bank
+            </label>
+          </div>
+        </div>
+
+        <button type="button" id="linkCardButton" class="btn btn-primary">Link Your Card</button>
+
+      </form> 
+
+      <div id="result2"></div>
+
+     <!-- Explaining Improvements -->
+
+      <div class="resolution1">
+        <p class="info">Here the bank selection section has been simplified to exclude the use of a dropdown and make the individual banks their own button for linking a card, there are only five banks so why not use buttons for this? This UI design employs the use of radio buttons to display all of the available banks. Dropdowns are useful is some areas of web development but for the most part, they are overused and not having the banks hidden behind a dropdown should be less tedious to a user.</p>
+      </div>
+      
+<!-- Improved Expiration Date From -->
+      <form class="cardForm1">
+        <label  id="expirationLabel" for="expirationDate">Expiration Date</label>
+        <div id="expirationDate" class="expiration-date">
+          <input type="text" id="expirationMonth" name="expirationMonth" placeholder="MM" maxlength="2" pattern="\d{2}" title="Two-digit month" required />
+          /
+          <input type="text" id="expirationYear" name="expirationYear" placeholder="YY" maxlength="2" pattern="\d{2}" title="Two-digit year" required />
+        </div>
+      
+        <button type="button" id="validateButton" class="btn btn-primary">Display</button>
+      </form>
+      
+      <div id="result1"></div>
+
+      <!-- Explaining Improvements -->
+
+      <div class="resolution2">
+        <p class="info">Here the expiration date has been updated to exclude the use of dropdowns. The user will now type what number month the card expires and type the last two digits of the year, how it appears on the card. Realistically the only two numbers that are possible in the first two digits of the year is "20". We will not need the first two digits "30" for another few decades. We can worry about updating it to include the use of "30" when we need to because we need to make the user expirence a joy right now instead of complicating it for the future's sake.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <div id="footer-block">
+        <p>Dalton Rodgers <br>2023</p>
+      </div>
+    </footer>
+     
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/navInfoScript.js"></script>
+    <script src="scripts/navScript.js"></script>
+  </body>
+</html>
